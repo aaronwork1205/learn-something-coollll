@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build -f ../../docker/dummy-backend/Dockerfile ../../docker/dummy-backend/ -t test
+      run: docker build -f docker/dummy-backend/Dockerfile -t dummy-backend docker/dummy-backend/
