@@ -21,7 +21,6 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Build Docker image
-        run: docker build -f docker/dummy-backend/Dockerfile -t ghcr.io/${{ github.repository }}/dummy-backend:latest docker/dummy-backend/
-
+        run: docker build -f docker/dummy-backend/Dockerfile -t ghcr.io/${{ github.repository }}/dummy-backend:latest docker/dummy-backend/ | docker build -f docker/dummy-database/Dockerfile -t ghcr.io/${{ github.repository }}/dummy-database:latest docker/dummy-database/
       - name: Push image to GitHub Container Registry
         run: docker push ghcr.io/${{ github.repository }}/dummy-backend:latest
