@@ -29,3 +29,31 @@ jobs:
       - name: Push image to GitHub Container Registry
         run: docker push ghcr.io/${{ github.repository }}/dummy-backend:latest
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
